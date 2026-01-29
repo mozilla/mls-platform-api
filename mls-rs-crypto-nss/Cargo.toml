@@ -25,7 +25,7 @@ std = [
 mls-rs-core = { version = "0.25", default-features = false }
 mls-rs-crypto-hpke = { version = "0.19", default-features = false }
 mls-rs-crypto-traits = { version = "0.20", default-features = false }
-nss-rs = { path = "/opt/mozilla/nss-rs", default-features = false }
+nss-rs = { git = "https://github.com/mozilla/nss-rs", rev = "78715d7", default-features = false }
 
 thiserror = { version = "2", optional = true }
 zeroize = { version = "1", default-features = false, features = ["alloc", "zeroize_derive"] }
