@@ -90,7 +90,7 @@ impl AeadType for Aead {
                 let mut cipher = nss_rs::aead::Aead::new(mode, alg, &key, nonce_array)?;
 
                 let ciphertext = cipher
-                    .seal(aad_array, data)
+                    .encrypt(aad_array, data)
                     .map_err(|_| AeadError::NssError(nss_rs::Error::Aead))?;
 
                 Ok(ciphertext)
@@ -105,7 +105,7 @@ impl AeadType for Aead {
                 let mut cipher = nss_rs::aead::Aead::new(mode, alg, &key, nonce_array)?;
 
                 let ciphertext = cipher
-                    .seal(aad_array, data)
+                    .encrypt(aad_array, data)
                     .map_err(|_| AeadError::NssError(nss_rs::Error::Aead))?;
 
                 Ok(ciphertext)
@@ -120,7 +120,7 @@ impl AeadType for Aead {
                 let mut cipher = nss_rs::aead::Aead::new(mode, alg, &key, nonce_array)?;
 
                 let ciphertext = cipher
-                    .seal(aad_array, data)
+                    .encrypt(aad_array, data)
                     .map_err(|_| AeadError::NssError(nss_rs::Error::Aead))?;
 
                 Ok(ciphertext)
@@ -159,7 +159,7 @@ impl AeadType for Aead {
                 let mut cipher = nss_rs::aead::Aead::new(mode, alg, &key, nonce_array)?;
 
                 let plaintext = cipher
-                    .open(aad_array, 0, ciphertext)
+                    .decrypt(aad_array, 0, ciphertext)
                     .map_err(|_| AeadError::NssError(nss_rs::Error::Aead))?;
 
                 Ok(plaintext)
@@ -174,7 +174,7 @@ impl AeadType for Aead {
                 let mut cipher = nss_rs::aead::Aead::new(mode, alg, &key, nonce_array)?;
 
                 let plaintext = cipher
-                    .open(aad_array, 0, ciphertext)
+                    .decrypt(aad_array, 0, ciphertext)
                     .map_err(|_| AeadError::NssError(nss_rs::Error::Aead))?;
 
                 Ok(plaintext)
@@ -189,7 +189,7 @@ impl AeadType for Aead {
                 let mut cipher = nss_rs::aead::Aead::new(mode, alg, &key, nonce_array)?;
 
                 let plaintext = cipher
-                    .open(aad_array, 0, ciphertext)
+                    .decrypt(aad_array, 0, ciphertext)
                     .map_err(|_| AeadError::NssError(nss_rs::Error::Aead))?;
 
                 Ok(plaintext)
