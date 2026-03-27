@@ -8,7 +8,7 @@ license = "Apache-2.0 OR MIT"
 gecko = ["mls-rs-crypto-nss/gecko"]
 
 [dependencies]
-mls-rs = { version = "0.52", default-features = false, features = ["std", "serde", "rfc_compliant"] }
+mls-rs = { version = "0.54", default-features = false, features = ["std", "serde", "rfc_compliant"] }
 mls-rs-crypto-nss = { path = "../mls-rs-crypto-nss" }
 mls-rs-provider-sqlite = { path = "../mls-rs-provider-sqlite", features = ["sqlcipher-bundled"] }
 hex = { version = "0.4", features = ["serde"] }

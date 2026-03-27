@@ -71,7 +71,7 @@ impl PlatformState {
         state
             .get_sqlite_engine()?
             .application_data_storage()
-            .map_err(|e| (PlatformError::StorageError(e.into_any_error())))?;
+            .map_err(|e| PlatformError::StorageError(e.into_any_error()))?;
 
         Ok(state)
     }
