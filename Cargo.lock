@@ -648,14 +648,13 @@ name = "mls-rs-crypto-nss"
 version = "0.2.1"
 dependencies = [
  "assert_matches",
- "getrandom 0.2.17",
+ "getrandom 0.3.4",
  "hex",
  "maybe-async",
  "mls-rs-core",
  "mls-rs-crypto-hpke",
  "mls-rs-crypto-traits",
  "nss-rs",
- "rand_core 0.6.4",
  "serde",
  "serde_json",
  "thiserror",
@@ -838,9 +837,6 @@ name = "rand_core"
 version = "0.6.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
-dependencies = [
- "getrandom 0.2.17",
-]
 
 [[package]]
 name = "rand_core"

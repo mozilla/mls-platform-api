@@ -17,7 +17,6 @@ std = [
     "mls-rs-crypto-hpke/std",
     "mls-rs-crypto-traits/std",
     "getrandom/std",
-    "rand_core/std",
     "dep:thiserror"
 ]
 
@@ -29,8 +28,7 @@ nss-rs = { version = "0.14", git = "https://github.com/mozilla/nss-rs", default-
 thiserror = { version = "2", optional = true }
 zeroize = { version = "1", default-features = false, features = ["alloc", "zeroize_derive"] }
 
-getrandom = { version = "0.2", default-features = false }
-rand_core = { version = "0.6", default-features = false, features = ["alloc"] }
+getrandom = { version = "0.3", default-features = false }
 
 maybe-async = "0.2"
 
