@@ -1,3 +1,3 @@
 # mls-platform-api
 
-Experimental Rust platform API that can be used to build the MLS functions in Firefox
+Implementation of the MLS platform API for Firefox.
