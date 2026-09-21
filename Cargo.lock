@@ -180,6 +180,26 @@ dependencies = [
 ]
 
 [[package]]
+name = "derive_more"
+version = "2.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "093242cf7570c207c83073cf82f79706fe7b8317e98620a47d5be7c3d8497678"
+dependencies = [
+ "derive_more-impl",
+]
+
+[[package]]
+name = "derive_more-impl"
+version = "2.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bda628edc44c4bb645fbe0f758797143e4e07926f7ebf4e9bdfbd3d2ce621df3"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.119",
+]
+
+[[package]]
 name = "either"
 version = "1.18.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -596,7 +616,7 @@ dependencies = [
 
 [[package]]
 name = "mls-rs-crypto-nss"
-version = "0.2.1"
+version = "0.2.2"
 dependencies = [
  "assert_matches",
  "getrandom 0.3.4",
@@ -673,16 +693,15 @@ dependencies = [
 
 [[package]]
 name = "nss-rs"
-version = "0.14.6"
-source = "git+https://github.com/mozilla/nss-rs#63c63046208f587573f71bb3885f16d10e0bf4eb"
+version = "0.16.1"
+source = "git+https://github.com/mozilla/nss-rs#ba8a3f6acffc7e25749054969ccbbb3ca615df7f"
 dependencies = [
  "bindgen",
+ "derive_more",
  "enum-map",
  "log",
  "mozbuild",
- "once_cell",
- "pkcs11-bindings",
- "semver",
+ "pkg-config",
  "serde",
  "serde_derive",
  "strum",
@@ -702,15 +721,6 @@ name = "pin-project-lite"
 version = "0.2.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a89322df9ebe1c1578d689c92318e070967d1042b512afbe49518723f4e6d5cd"
-
-[[package]]
-name = "pkcs11-bindings"
-version = "0.1.8"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f81e0ffd4db150990a30013e47ebeeab2a71cfb27d1cbd83d1ec43d7b297e0c1"
-dependencies = [
- "bindgen",
-]
 
 [[package]]
 name = "pkg-config"
@@ -856,12 +866,6 @@ name = "rustversion"
 version = "1.0.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cf54715a573b99ac80df0bc206da022bcd442c974952c7b9720069370852e21f"
-
-[[package]]
-name = "semver"
-version = "1.0.28"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8a7852d02fc848982e0c167ef163aaff9cd91dc640ba85e263cb1ce46fae51cd"
 
 [[package]]
 name = "serde"

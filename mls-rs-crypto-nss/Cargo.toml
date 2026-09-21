@@ -1,6 +1,6 @@
 [package]
 name = "mls-rs-crypto-nss"
-version = "0.2.1"
+version = "0.2.2"
 edition = "2021"
 description = "NSS based CryptoProvider for mls-rs"
 homepage = "https://github.com/awslabs/mls-rs"
@@ -24,7 +24,7 @@ std = [
 mls-rs-core = { version = "0.27", default-features = false }
 mls-rs-crypto-hpke = { version = "0.21", default-features = false }
 mls-rs-crypto-traits = { version = "0.22", default-features = false }
-nss-rs = { version = "0.14", git = "https://github.com/mozilla/nss-rs", default-features = false }
+nss-rs = { version = "0.16", git = "https://github.com/mozilla/nss-rs", default-features = false }
 thiserror = { version = "2", optional = true }
 zeroize = { version = "1", default-features = false, features = ["alloc", "zeroize_derive"] }
 

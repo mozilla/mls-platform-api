@@ -19,10 +19,15 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Rust cache
         uses: Swatinem/rust-cache@v2
+
+      - name: Install NSS
+        uses: mozilla/nss-rs/install-nss@v0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build Rust code
         run: cargo build
