@@ -25,7 +25,7 @@ jobs:
         uses: Swatinem/rust-cache@v2
 
       - name: Install NSS
-        uses: mozilla/nss-rs/install-nss@v0
+        uses: mozilla/nss-rs/install-nss@0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
