@@ -395,6 +395,7 @@ where
 
 #[cfg(not(mls_build_async))]
 #[test]
+#[ignore = "mls_rs_core::crypto::test_suite::verify_tests requires files that are not shipped in the packaged crate"]
 fn mls_core_tests() {
     let provider = NssCryptoProvider::new();
     mls_rs_core::crypto::test_suite::verify_tests(&provider, true);
